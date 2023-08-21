@@ -13,7 +13,7 @@
   <!-- Font Awesome if you need it
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"> 
+  <link rel="stylesheet" href="https://cdn.tailwindcss.com/3.3.3"> 
   <!--Replace with your tailwind.css once created-->
 
 </head>
@@ -25,12 +25,12 @@
   <div class="max-w-4xl flex items-center h-auto lg:h-screen flex-wrap mx-auto my-32 lg:my-0">
     
 	<!--Main Col-->
-	<div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0">
+	<div id="profile" class="w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white mx-6 lg:mx-0" style="background-color: rgba(255,255,255,0);">
 	
 
-		<div class="p-4 md:p-12 text-center lg:text-left">
+		<div class="p-4 md:p-12 text-center lg:text-left" tyle="background-color: rgba(255,255,255,0.75);">
 			<!-- Image for mobile view-->
-			<div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center opacity-100" style="background-image: url('https://static.mademoe.com/KUOR3441-crop.jpg')"></div>
+			<div class="block lg:hidden rounded-full shadow-xl mx-auto -mt-16 h-48 w-48 bg-cover bg-center" style="background-image: url('https://static.mademoe.com/KUOR3441-crop.jpg')"></div>
 			
 			<h1 class="text-3xl font-bold pt-8 lg:pt-0">Willy Hsiao</h1>
 			<div class="mx-auto lg:mx-0 w-4/5 pt-3 border-b-2 border-teal-500 opacity-25"></div>
@@ -69,50 +69,9 @@
 		<img src="https://static.mademoe.com/KUOR3441.JPG" class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block">
 		
 	</div>
-	
-	
-	<!-- Pin to top right corner -->
-	  <div class="absolute top-0 right-0 h-12 w-18 p-4">
-		<button class="js-change-theme focus:outline-none">🌙</button>
-	  </div>
 
 </div>
 
-	<script src="https://unpkg.com/popper.js@1/dist/umd/popper.min.js"></script>
-	<script src="https://unpkg.com/tippy.js@4"></script>
-	<script>
-		//Init tooltips
-		tippy('.link',{
-		  placement: 'bottom'
-		})
-
-		//Toggle mode
-		const toggle = document.querySelector('.js-change-theme');
-		const body = document.querySelector('body');
-		const profile = document.getElementById('profile');
-		
-		
-		toggle.addEventListener('click', () => {
-
-		  if (body.classList.contains('text-gray-900')) {
-			toggle.innerHTML = "☀️";
-			body.classList.remove('text-gray-900');
-			body.classList.add('text-gray-100');
-			profile.classList.remove('bg-white');
-			profile.classList.add('bg-gray-900');
-		  } else
-		  {
-			toggle.innerHTML = "🌙";
-			body.classList.remove('text-gray-100');
-			body.classList.add('text-gray-900');
-			profile.classList.remove('bg-gray-900');			
-			profile.classList.add('bg-white');
-			
-		  }
-		});
-		
-    </script>
-	
 </body>
 
 </html>
